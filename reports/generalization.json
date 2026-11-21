@@ -1,0 +1,186 @@
+{
+ "n_cities": 42,
+ "folds": [
+  [
+   "Montreal",
+   "Udaipur",
+   "Siliguri",
+   "Gandhinagar",
+   "Jaipur",
+   "Kolkata",
+   "Bengaluru"
+  ],
+  [
+   "Los Angeles",
+   "Mexico City",
+   "Patna",
+   "New York",
+   "Guwahati",
+   "Bhopal",
+   "Sapporo"
+  ],
+  [
+   "Nagpur",
+   "Chennai",
+   "Jodhpur",
+   "Sao Paulo",
+   "Mumbai",
+   "Ahmedabad",
+   "Pune"
+  ],
+  [
+   "Kochi",
+   "Mysuru",
+   "Mangaluru",
+   "Kanpur",
+   "Dhaka",
+   "Helsinki",
+   "Beijing"
+  ],
+  [
+   "Sydney",
+   "Budapest",
+   "Nairobi",
+   "Madrid",
+   "Riyadh",
+   "Indore",
+   "Hyderabad"
+  ],
+  [
+   "Bhubaneswar",
+   "London",
+   "Seoul",
+   "Cairo",
+   "Lucknow",
+   "Tokyo",
+   "Delhi"
+  ]
+ ],
+ "leave_cities_out": {
+  "Ridge": {
+   "rmse": 1.7650589308362579,
+   "mae": 1.276297798089926,
+   "r2": 0.2097170374570504
+  },
+  "Random Forest": {
+   "rmse": 1.9128518140958617,
+   "mae": 1.3201253901923917,
+   "r2": 0.07183143953508453
+  },
+  "HistGradientBoosting": {
+   "rmse": 1.8521663245217814,
+   "mae": 1.3296200479864957,
+   "r2": 0.12978980540179275
+  },
+  "Mean baseline": {
+   "rmse": 2.021935160665812,
+   "mae": 1.4279092414750278,
+   "r2": -0.03704749883360914
+  }
+ },
+ "per_city_rmse_hgb": {
+  "best5": [
+   {
+    "city": "Cairo",
+    "rmse": 0.502143588116719,
+    "n": 12
+   },
+   {
+    "city": "Patna",
+    "rmse": 0.5713658789896408,
+    "n": 12
+   },
+   {
+    "city": "Riyadh",
+    "rmse": 0.8370104342647973,
+    "n": 12
+   },
+   {
+    "city": "Delhi",
+    "rmse": 0.912942281031475,
+    "n": 11
+   },
+   {
+    "city": "Lucknow",
+    "rmse": 1.0041283252865023,
+    "n": 11
+   }
+  ],
+  "worst5": [
+   {
+    "city": "Seoul",
+    "rmse": 2.6927529044746517,
+    "n": 12
+   },
+   {
+    "city": "Nairobi",
+    "rmse": 2.789242761056085,
+    "n": 12
+   },
+   {
+    "city": "Mangaluru",
+    "rmse": 2.843018371722212,
+    "n": 12
+   },
+   {
+    "city": "Sapporo",
+    "rmse": 3.679691720543935,
+    "n": 12
+   },
+   {
+    "city": "Sydney",
+    "rmse": 4.95887995753919,
+    "n": 12
+   }
+  ]
+ },
+ "n_cities_hgb_beats_mean": 25,
+ "cross_region": {
+  "India to International": {
+   "n_test": 211,
+   "Ridge": {
+    "rmse": 7.482314401047548,
+    "mae": 5.872983471960466,
+    "r2": -11.438290997874066
+   },
+   "Random Forest": {
+    "rmse": 1.9642608900997311,
+    "mae": 1.332552873738525,
+    "r2": 0.1427901627010112
+   },
+   "HistGradientBoosting": {
+    "rmse": 2.0672097903148936,
+    "mae": 1.507897197505915,
+    "r2": 0.05058101150265237
+   },
+   "Mean baseline": {
+    "rmse": 2.1682281494140625,
+    "mae": 1.366581916809082,
+    "r2": -0.04447674751281738
+   }
+  },
+  "International to India": {
+   "n_test": 278,
+   "Ridge": {
+    "rmse": 1.907115595349004,
+    "mae": 1.385757853458114,
+    "r2": -0.037207283554111736
+   },
+   "Random Forest": {
+    "rmse": 1.9473684231763153,
+    "mae": 1.4270722386464405,
+    "r2": -0.08145329910930044
+   },
+   "HistGradientBoosting": {
+    "rmse": 2.0291006275292567,
+    "mae": 1.472820179584883,
+    "r2": -0.17413678114815423
+   },
+   "Mean baseline": {
+    "rmse": 1.8738747835159302,
+    "mae": 1.4364079236984253,
+    "r2": -0.0013655424118041992
+   }
+  }
+ }
+}
