@@ -1,6 +1,6 @@
 # Lean dependency list for the Streamlit dashboard (used by Streamlit Community Cloud).
 # The models in models/ were saved with a recent scikit-learn, so do not pin an old one.
-streamlit>=1.40
+streamlit>=1.50
 pandas>=2.2
 numpy>=1.26
 pyarrow>=15
