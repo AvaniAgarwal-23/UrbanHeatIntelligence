@@ -153,3 +153,19 @@ cd ../server && npm test
 Kumar, A. et al. (2026). Global Urban Heat Island Analysis across 42 Cities (2016–2025).
 GitHub: https://github.com/Atharv-2314/Urban-Heat-Island-Analysis-Temperature-Prediction
 ```
+
+## Streamlit dashboard
+
+An 8 page Streamlit version of the dashboard lives in `dashboard/`.
+
+```bash
+pip install -r dashboard/requirements.txt
+streamlit run dashboard/streamlit_app.py
+```
+
+Pages: Overview Map, City Deep Dive, Spatial Grid, ML Benchmarks, Rolling Window,
+Generalization, Explainability and Cooling Simulator.
+
+Deploying on Streamlit Community Cloud: repository `AvaniAgarwal-23/UrbanHeatIntelligence`,
+branch `main`, main file path `dashboard/streamlit_app.py`. Use Python 3.11 or newer
+because the saved models were pickled with a recent scikit-learn.
