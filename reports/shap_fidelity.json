@@ -1,0 +1,138 @@
+{
+ "n_test": 489,
+ "n_features": 43,
+ "test_rmse": 1.2794133121154807,
+ "additivity": {
+  "mean_abs_err": 1.0203703793055685e-15,
+  "max_abs_err": 9.769962616701378e-15,
+  "expected_value": 0.20191691140089016
+ },
+ "top10": {
+  "Urban_Valid_LST_Pixel_Count": 0.4231,
+  "relative_humidity": 0.3646,
+  "longitude": 0.2901,
+  "relative_humidity_lag1": 0.2214,
+  "Rural_Valid_LST_Pixel_Count": 0.1501,
+  "latitude": 0.1487,
+  "ndwi": 0.1083,
+  "population_density": 0.1031,
+  "ndbi": 0.0868,
+  "ndvi": 0.064
+ },
+ "stability_2024_vs_2025": {
+  "spearman": 0.9879190576864996,
+  "top10_overlap": 9
+ },
+ "stability_india_vs_intl": {
+  "n_india": 278,
+  "n_intl": 211,
+  "spearman": 0.9060706735125341,
+  "top10_overlap": 9,
+  "india_top5": [
+   "Urban_Valid_LST_Pixel_Count",
+   "relative_humidity",
+   "longitude",
+   "relative_humidity_lag1",
+   "Rural_Valid_LST_Pixel_Count"
+  ],
+  "intl_top5": [
+   "Urban_Valid_LST_Pixel_Count",
+   "relative_humidity",
+   "longitude",
+   "relative_humidity_lag1",
+   "latitude"
+  ]
+ },
+ "perm_vs_shap": {
+  "spearman": 0.7359081818964729,
+  "top10_overlap": 9,
+  "perm_top10": {
+   "Urban_Valid_LST_Pixel_Count": 0.477,
+   "longitude": 0.2342,
+   "relative_humidity": 0.1604,
+   "Rural_Valid_LST_Pixel_Count": 0.1247,
+   "ndwi": 0.1042,
+   "relative_humidity_lag1": 0.0763,
+   "latitude": 0.0706,
+   "population_density": 0.0479,
+   "ndbi": 0.0468,
+   "solar_radiation": 0.0243
+  }
+ },
+ "deletion": {
+  "1": {
+   "top_k_rmse": 1.5372733584731129,
+   "top_k_pred_shift": 0.43903451540222516,
+   "bottom_k_rmse": 1.2794133121154807,
+   "random_k_rmse": 1.3011581478283085,
+   "random_k_pred_shift": 0.09919597778610423
+  },
+  "3": {
+   "top_k_rmse": 1.6815264775336325,
+   "top_k_pred_shift": 0.7352104427676175,
+   "bottom_k_rmse": 1.2793624240075925,
+   "random_k_rmse": 1.3440845896873082,
+   "random_k_pred_shift": 0.23010504487465455
+  },
+  "5": {
+   "top_k_rmse": 1.7062332540541474,
+   "top_k_pred_shift": 0.7687420977253266,
+   "bottom_k_rmse": 1.2785700062929748,
+   "random_k_rmse": 1.392172154050763,
+   "random_k_pred_shift": 0.3303183669138504
+  },
+  "10": {
+   "top_k_rmse": 1.9345932115732172,
+   "top_k_pred_shift": 1.0576157985785042,
+   "bottom_k_rmse": 1.2752163832839825,
+   "random_k_rmse": 1.4585592792455235,
+   "random_k_pred_shift": 0.44853983587589585
+  }
+ },
+ "group_share": {
+  "data coverage": 0.1976,
+  "location": 0.144,
+  "population": 0.0339,
+  "season": 0.0143,
+  "surface indices": 0.148,
+  "weather": 0.4622
+ },
+ "ablation": {
+  "all": {
+   "n_feat": 43,
+   "test_rmse": 1.2423968858956538,
+   "test_r2": 0.6084520922763919,
+   "val_rmse": 2.376217925863341
+  },
+  "no_coverage": {
+   "n_feat": 39,
+   "test_rmse": 1.2664919163863033,
+   "test_r2": 0.593117469653835,
+   "val_rmse": 2.434043274031516
+  },
+  "no_location": {
+   "n_feat": 41,
+   "test_rmse": 1.292701082735669,
+   "test_r2": 0.5761029205055289,
+   "val_rmse": 2.363565722195604
+  },
+  "no_coverage_no_location": {
+   "n_feat": 37,
+   "test_rmse": 1.3327959492032433,
+   "test_r2": 0.5493996470973845,
+   "val_rmse": 2.4815283044564707
+  },
+  "no_weather": {
+   "n_feat": 18,
+   "test_rmse": 1.230551247208413,
+   "test_r2": 0.6158829284871753,
+   "val_rmse": 2.442040310828648
+  },
+  "no_surface": {
+   "n_feat": 35,
+   "test_rmse": 1.3065234006486621,
+   "test_r2": 0.566989343531533,
+   "val_rmse": 2.408450971661046
+  }
+ }
+}
