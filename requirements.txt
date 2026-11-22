@@ -12,7 +12,6 @@ category_encoders>=2.6.0
 shap>=0.45.0
 
 # Visualization & Interactive Dashboard
-streamlit>=1.32.0
 plotly>=5.19.0
 pydeck>=0.8.0
 matplotlib>=3.8.0
